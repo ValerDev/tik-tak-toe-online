@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "../../styles/game.module.css";
 import { GameSymbol } from "./GameSymbol.jsx";
 
 export function GameInfo({ isDraw, winnerSymbol, currentStep }) {
@@ -9,19 +8,19 @@ export function GameInfo({ isDraw, winnerSymbol, currentStep }) {
   });
 
   if (isDraw) {
-    return <div className={styles["game-info"]}>Ничья</div>;
+    return <div className={"mb-2.5"}>Ничья</div>;
   }
 
   if (winnerSymbol) {
     return (
-      <div className={styles["game-info"]}>
+      <div className={"mb-2.5"}>
         Победитель: <GameSymbol symbol={winnerSymbol} />
       </div>
     );
   }
 
   return (
-    <div className={styles["game-info"]}>
+    <div className={"mb-2.5"}>
       Ход: <GameSymbol symbol={currentStep} />
     </div>
   );
