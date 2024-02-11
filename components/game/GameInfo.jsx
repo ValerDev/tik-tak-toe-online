@@ -6,10 +6,10 @@ import { ZeroIcon } from "./icons/ZeroIcon";
 export const GameInfo = ({ className }) => {
   return (
     <div
-      className={
-        (clsx(className),
-        "bg-white rouned-2xl shadow-md px-8 py-4 flex justify-between")
-      }
+      className={clsx(
+        className,
+        "bg-white rounded-2xl shadow-md px-8 py-4 flex justify-between",
+      )}
     >
       <div className="flex items-center gap-3">
         <div className="relative">
