@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import avatar from "./avatar.png";
+import avatar1 from "../Game/images/avatar1.png";
 import Image from "next/image";
 
-export const Profile = ({ className }) => {
+export const Profile = ({ className, name, rating, avatar = avatar1 }) => {
   return (
     <div
       className={clsx(
@@ -11,9 +11,11 @@ export const Profile = ({ className }) => {
       )}
     >
       <Image src={avatar} alt="avatar" unoptimized />
-      <div>
-        <div className="text-lg leading-tight">Paromovevg</div>
-        <div className="text-slate-400 text-xs leading-tight">Rating: 1230</div>
+      <div className="overflow-hidden">
+        <div className="text-lg leading-tight truncate ">{name}</div>
+        <div className="text-slate-400 text-xs leading-tight">
+          Rating: {rating}
+        </div>
       </div>
     </div>
   );
