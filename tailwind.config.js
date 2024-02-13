@@ -11,9 +11,9 @@ module.exports = {
   theme: {
     extend: {
       lineHeight: {
-        tight: '1.2',
-      }
-    }
+        tight: "1.2",
+      },
+    },
   },
   plugins: [],
 };
